@@ -46,6 +46,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v4
+        with:
+          go-version: '1.25.4'
+        
       # Используется действие "golangci/golangci-lint-action@v3", которое запускает линтер. Он проверит код на соответствие стилю и отсутствие логических ошибок
       - uses: golangci/golangci-lint-action@v3
         with:
